@@ -9,9 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Biglietto treno</h1>
+    <div class="container bg-primary mt-3">
         <form class="row">
+            <h1 class="white mt-3 mb-3">Biglietto treno</h1>
             <div class="mb-3 col-4">
                 <label for="nome-utente" class="form-label">Inserisci nome</label>
                 <input class="form-control" type="text" id="nome" required placeholder="Mario">
@@ -23,20 +23,24 @@
               <div class="mb-3 col-4">
                 <label for="età" class="form-label">Inserisci Fascia età</label>
                 <select class="form-select" aria-label="Default select example" id="età" required>
-                    <option value="1">Bambino 0-14</option>
-                    <option value="2">Ragazzo 14-35</option>
-                    <option value="3">Adulto 35+</option>
+                    <option value="0-14">Bambino 0-14</option>
+                    <option value="14-35">Ragazzo 14-35</option>
+                    <option value="65+">Adulto 35+</option>
                   </select>
               </div>
-              <div class="mb-3 col-8">
+              <div class="mb-3 col-5">
                 <label for="input-email" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" required placeholder="mario.rossi@gmail.com">
               </div>
-              <div class="mb-3 col-4">
-                <label for="km-input" class="form-label">Quanti km vuoi percorrere</label>
-                <input class="form-control" id="km-input" type="number" max="10000" placeholder="200">
+              <div class="mb-3 col-5">
+                <label for="telefono" class="form-label">Recapito telefonico</label>
+                <input class="form-control" id="telefono" type="number" max="9999999999" min="9999999999" placeholder="1234567890">
               </div>
-              <div class="col-12 mb-3">
+              <div class="mb-3 col-2">
+                <label for="km-input" class="form-label">Quanti km vuoi percorrere</label>
+                <input class="form-control" id="km-input" type="number" max="10000" min="0" placeholder="200">
+              </div>
+              <div class="col-12 mb-3 ">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                   <label class="form-check-label" for="invalidCheck">
@@ -44,11 +48,13 @@
                   </label>
                 </div>
               </div>
-              <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit</button>
+              <div class="col-12 mb-3">
+                <button class="btn btn-light" type="submit">Submit</button>
               </div>
         </form>
-        <div class="containerTicket">
+    </div>
+    <div class="container  bg-success mt-3">
+        <div class="containerTicket row">
         </div>
     </div>
     <script src="script.js"></script>
