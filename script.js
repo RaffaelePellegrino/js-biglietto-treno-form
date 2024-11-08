@@ -16,6 +16,12 @@ function ticket(){
     const email = document.getElementById("input-email").value;
 
     const km = document.getElementById("km-input").value;
+
+    const check = document.getElementById("invalidCheck").checked;
+    if (!nome || !cognome || !email || !km || !check){
+        alert("Inserire tutti i dati");
+        return;
+    }
     let prezzoTotale = parseInt(km) * prezzoKm;
     
     if (età === 1){
